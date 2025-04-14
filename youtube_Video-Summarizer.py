@@ -1,9 +1,10 @@
 # pip install youtube-transcript-api
 
-from youtube-transcript-api import YouTubeTranscriptApi
-def get-video-id(url):
+from youtube_transcript_api import YouTubeTranscriptApi
+def get_video_id(url):
   return url.split("watch?v=")[-1]
 
-video_id = get-video-id(input("enter url"))
+video_id = get_video_id(input("enter url"))
 
-print (video_id)
+transcript = YouTubeTranscriptApi.get_transcript(video_id)
+transcript_join = " ".join([i["text"] for i in transcript])
