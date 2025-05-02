@@ -1,5 +1,5 @@
-!pip install youtube-transcript-api
-!pip install git+https://github.com/babthamotharan/rpunct.git@patch-2
+pip install youtube-transcript-api
+pip install git+https://github.com/babthamotharan/rpunct.git@patch-2
 from rpunct import RestorePuncts
 from youtube_transcript_api import YouTubeTranscriptApi
 def get_video_id(url):
